@@ -229,7 +229,7 @@ def display_weather_data(weather_data, city, unit='C', data_type='forecast'):
 
             # Retrieve the icon and attempt to read the corresponding image file.
             icon = day.get('icon', 'default')
-            icon_path = fr'Icon\{icon}.png'
+            icon_path = f'Icon/{icon}.png'
             try:
                 with open(icon_path, 'rb') as img_file:
                     icon_base64 = base64.b64encode(img_file.read()).decode('utf-8')
